@@ -9,10 +9,9 @@ This script is for installing TCD_Mobile printing configuration on Linux machine
 * `cups`
   * Debian/Ubuntu: `sudo apt install cups`
   * Arch Linux: `sudo pacman -S cups`
-  * If your distribution is not listed here, you can easily search it for online.
+  * If your distribution is not listed here, you can easily search for it online.
 
 ## Executing the script
 
 1. Allow executable permissions: `chmod +x install-printer.sh`
-
-2. Run script: `./install-printer.sh`
+2. Run script: `./install-printer.sh <student number> <PIN>`
