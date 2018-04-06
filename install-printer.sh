@@ -21,18 +21,18 @@ else
     IFS=':' read -r -a array <<< "$response"
     lpadmin -p $name -m $drvPath -v $printPrefix/${array[0]}/${array[1]} -o $printerArgs -E
 
-		rc=$?;
-		if [[ $rc != 0 ]]
-		then
-			lpadmin -p $name -P $ppdPath -v $printPrefix/${array[0]}/${array[1]} -o $printerArgs -E
+    rc=$?;
+    if [[ $rc != 0 ]]
+    then
+      lpadmin -p $name -P $ppdPath -v $printPrefix/${array[0]}/${array[1]} -o $printerArgs -E
 
-			rc=$?
-			if [[ $rc != 0 ]]
-			then
-				echo "Cannot install printer configuration due to unknown error."
-				exit 1
-			fi
-		fi
+      rc=$?
+      if [[ $rc != 0 ]]
+      then
+        echo "Cannot install printer configuration due to unknown error."
+        exit 1
+      fi
+    fi
 
     echo "TCD_Mobile printer installation completed."
   fi
